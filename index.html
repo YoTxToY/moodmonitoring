@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#f5f0fb">
+<meta name="theme-color" content="#edf7ef">
 <meta name="description" content="心晴日记：温柔记录情绪，发现自己的节奏。">
 <title>心晴日记 · 情绪与自我关怀</title>
 <style>
-:root{--bg:#f7f3fa;--paper:#fffdfd;--lav:#e9e0f5;--lav2:#d9c9ee;--purple:#7864a6;--deep:#4e426c;--ink:#332d40;--muted:#81798d;--line:#ece5f1;--rose:#f4e2e8;--sage:#e4eee5;--gold:#f5ead0;--shadow:0 16px 45px rgba(76,57,104,.08);--radius:22px}
+:root{--bg:#f2f8f1;--paper:#fffefb;--lav:#e3f0e2;--lav2:#bfdcbc;--purple:#54875e;--deep:#356744;--ink:#29382d;--muted:#77877a;--line:#e0eade;--rose:#e8f2e5;--sage:#dcebdc;--gold:#f4efd9;--shadow:0 16px 45px rgba(47,91,55,.08);--radius:22px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 8% 0%,#f0e8fa 0,transparent 36%),radial-gradient(ellipse at 100% 30%,#f9e9ee 0,transparent 30%),var(--bg);color:var(--ink);font-family:ui-rounded,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.65}
 button,input,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #c6b1e8;outline-offset:2px}
 .app{max-width:1120px;margin:auto;padding:28px 24px 54px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}.brand{display:flex;align-items:center;gap:12px}.brand-mark{width:46px;height:46px;border-radius:16px;background:linear-gradient(145deg,#d9c7ef,#f4dce6);display:grid;place-items:center;font-size:25px;box-shadow:0 8px 20px #d9c8e866}.brand-name{font-size:21px;font-weight:750;letter-spacing:.03em}.brand-sub{font-size:12px;color:var(--muted);margin-top:-2px}.privacy-pill{font-size:12px;color:#6c607e;background:#fff9;border:1px solid #e9dff1;border-radius:99px;padding:8px 12px;white-space:nowrap}
@@ -26,13 +26,51 @@ textarea{width:100%;resize:vertical;min-height:125px;border:1px solid #e9e1ef;ba
 .chart-wrap{height:220px;position:relative;margin:10px 0 5px}.chart-wrap canvas{width:100%;height:100%;display:block}.chart-legend{font-size:11px;color:var(--muted);text-align:center}.summary-box{background:#f7f2fa;border-radius:15px;padding:17px;margin-top:16px}.summary-box h3{margin:0 0 8px}.summary-box p{font-size:13px;color:#6e637e;margin:0;line-height:1.85}.bars{display:flex;flex-direction:column;gap:11px}.bar-row{display:grid;grid-template-columns:68px 1fr 24px;gap:9px;align-items:center;font-size:12px;color:var(--muted)}.bar-track{height:8px;background:#f1edf4;border-radius:99px;overflow:hidden}.bar-fill{height:100%;background:linear-gradient(90deg,#bca6db,#dfc6dd);border-radius:99px}.privacy-note{font-size:12px;color:#8b8296;line-height:1.8;background:#fbf8fc;border:1px solid var(--line);border-radius:14px;padding:14px;margin-top:18px}.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:#403653;color:#fff;padding:11px 17px;border-radius:12px;font-size:13px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.25s;z-index:20;max-width:calc(100vw - 30px);text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}.modal{position:fixed;inset:0;background:#2b203c70;display:none;align-items:center;justify-content:center;padding:20px;z-index:30}.modal.show{display:flex}.modal-card{width:min(480px,100%);background:#fffdfd;border-radius:22px;padding:24px;box-shadow:0 20px 70px #26173940}.modal-card h2{font-size:19px;margin:0 0 8px}.modal-card p{font-size:13px;color:var(--muted);white-space:pre-wrap;line-height:1.8}.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.footer{text-align:center;color:#a29aaa;font-size:11px;padding:30px 0 0}.safety-box{display:none;background:#fff0ef;border:1px solid #f1c8c5;color:#7b3937;border-radius:15px;padding:15px;font-size:13px;line-height:1.8;margin-top:14px}.safety-box.show{display:block}.safety-box a{color:#7b3937;font-weight:700}
 @media(max-width:800px){.app{padding:18px 15px 35px}.hero{grid-template-columns:1fr .65fr;gap:8px}.hero-copy{padding:18px 0}.hero-art{min-height:175px}.grid-main,.archive-layout{grid-template-columns:1fr}.emotion-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.emotion{padding:12px 4px}.card{padding:20px}.side-column{display:grid;grid-template-columns:1fr 1fr;gap:12px}.side-note{margin:0}.mini-stat{align-content:start}.mini-stat .stat{padding:12px}}
 @media(max-width:520px){.topbar{align-items:flex-start}.privacy-pill{font-size:10px;padding:7px 9px}.brand-name{font-size:18px}.brand-mark{width:40px;height:40px}.hero{grid-template-columns:1fr}.hero-copy{padding:8px 2px 14px}.hero-art{min-height:125px}.sun{width:75px;height:75px;font-size:32px}.cloud.one{font-size:42px}.cloud.two{font-size:36px}.nav{width:100%;display:grid;grid-template-columns:repeat(3,1fr)}.nav-btn{padding:9px 5px;font-size:12px}.recommendations{grid-template-columns:1fr}.side-column{grid-template-columns:1fr}.card{padding:17px}.result-hero{padding:15px}.weather{font-size:39px;min-width:48px}.entry-item{gap:8px}.entry-controls{flex-direction:column}.actions .btn{flex:1}.mini-stat{grid-template-columns:1fr 1fr}}
+
+/* Fresh green theme */
+body{background:radial-gradient(ellipse at 8% 0%,#e5f3e4 0,transparent 36%),radial-gradient(ellipse at 100% 30%,#f0f6df 0,transparent 32%),var(--bg)}
+.brand-mark{background:linear-gradient(145deg,#c9e7c8,#e8f2d7);box-shadow:0 8px 20px #b8d9b666}
+.hero-art{background:linear-gradient(135deg,#d8edd6,#edf5d9 65%,#f7f1d9)}
+.nav{border-color:#dfebdc}.nav-btn.active{background:var(--deep);box-shadow:0 5px 14px #35674425}
+.emotion.selected{background:#eaf5e8;border-color:#8fbd91;color:#315f3c;box-shadow:inset 0 0 0 1px #b5d8b4}
+textarea:focus{border-color:#9bc49b;box-shadow:0 0 0 3px #e4f1e1}
+.tag.selected,.btn-soft{background:#e8f3e5;border-color:#c9e1c6;color:#356744}.btn-soft:hover{background:#dcefd8}
+.btn-primary{background:#356744;box-shadow:0 7px 16px #35674425}.btn-primary:hover{background:#477f55}
+.side-note{background:linear-gradient(140deg,#eaf5e7,#f8f8eb);border-color:#dfeadd}.side-note .big-quote{color:#a5cda0}
+.result-hero{background:linear-gradient(135deg,#e7f3e4,#f4f7e8)}
+.step{background:#e8f3e5}.timer-box{background:#edf6e9}.breath-orb{background:radial-gradient(circle at 35% 30%,#fbfff8,#a9d7a5);box-shadow:0 0 0 12px #dcefd8}
+.summary-box{background:#edf5e9}.bar-track{background:#edf2e9}.bar-fill{background:linear-gradient(90deg,#a8d2a1,#5d9b69)}
+.entry-item:hover{border-color:#b9d8b5}
+
+/* Fresh botanical green theme */
+:root{--bg:#f2f8f1;--paper:#fffefa;--lav:#e3f0e2;--lav2:#b9d8b9;--purple:#54875e;--deep:#356744;--ink:#29382d;--muted:#77877a;--line:#dce8da;--rose:#e8f2e5;--sage:#dcebdc;--gold:#f3efd8;--shadow:0 16px 45px rgba(47,91,55,.08)}
+body{background:radial-gradient(ellipse at 8% 0%,#e4f1df 0,transparent 38%),radial-gradient(ellipse at 100% 30%,#f4f5e6 0,transparent 30%),var(--bg)}
+.brand-mark{background:linear-gradient(145deg,#cfe8cc,#eff6dc);box-shadow:0 8px 20px #b7d6b466}
+.hero-art{background:linear-gradient(135deg,#dcefd9,#edf5df 65%,#f5f0d9)}
+.nav{border-color:#dce8da}.nav-btn.active{background:#356744;box-shadow:0 5px 14px #35674425}
+.card{border-color:#e1eadf}.step{color:#356744;background:#eaf4e7}
+.emotion.selected{background:#e8f4e6;border-color:#8dbb8a;color:#2f6540;box-shadow:inset 0 0 0 1px #b9d8b9}
+.intensity-row input{accent-color:#54875e}.intensity-value{background:#eaf4e7;color:#356744}
+textarea{border-color:#dce8da;background:#fffefa}textarea:focus{border-color:#9ac69a;box-shadow:0 0 0 3px #e4f1e2}
+.tag{border-color:#dce8da;color:#718274}.tag.selected{background:#e8f4e6;border-color:#a9cfa5;color:#356744}
+.btn-primary{background:#356744;box-shadow:0 7px 16px #35674425}.btn-primary:hover{background:#477f55}.btn-soft{background:#e8f4e6;color:#356744}.btn-soft:hover{background:#dcefd9}
+.side-note{background:linear-gradient(140deg,#edf6e9,#fffdf3);border-color:#dfeade}.side-note .big-quote{color:#9ac69a}.side-note p{color:#506d55}
+.result-hero{background:linear-gradient(135deg,#e6f3e2,#f4f6e8)}.insight-label{color:#54875e}.insight-text,.insight-list{color:#4f6552}
+.timer-box{background:#edf6e9}.breath-orb{background:radial-gradient(circle at 35% 30%,#f8fff3,#a9d4a5);box-shadow:0 0 0 12px #dcefd8}
+.summary-box{background:#edf6e9}.summary-box p{color:#506d55}.bar-track{background:#e8efe5}.bar-fill{background:linear-gradient(90deg,#9bc89a,#4d8a5a)}
+.privacy-note{background:#f8fbf5}.footer{color:#849686}
+.reflection-panel{margin-top:18px;padding:18px;border:1px solid #d9e9d5;border-radius:17px;background:linear-gradient(145deg,#f5faf1,#fffefa)}
+.reflection-panel h3{margin:0 0 5px;font-size:16px}.reflection-intro{font-size:12px;color:var(--muted);margin:0 0 14px;line-height:1.8}
+.reflection-item{padding:13px 0;border-top:1px solid #e4eee0}.reflection-item:first-of-type{border-top:0}.reflection-item label{display:block;font-size:13px;font-weight:750;margin-bottom:7px;color:#385d3e}.reflection-item p{font-size:12px;color:var(--muted);margin:0 0 8px}.reflection-item textarea{min-height:72px;background:#fff;border-color:#dce8da}
+.tarot-layout{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:20px;align-items:stretch}.tarot-deck{min-height:320px;border-radius:22px;padding:22px;background:radial-gradient(circle at 50% 30%,#d9ead2,#b8d4b2 62%,#8eb78c);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#2f5738;border:1px solid #a6c9a0}.tarot-back{width:140px;height:218px;border-radius:15px;border:2px solid #f4f6df;box-shadow:0 12px 25px #315c3530;background:repeating-linear-gradient(45deg,#477b50 0 4px,#52885a 4px 8px);display:grid;place-items:center;margin-bottom:16px;position:relative}.tarot-back:before{content:'';position:absolute;inset:9px;border:1px solid #e5efd4;border-radius:9px}.tarot-back span{font-size:48px;color:#f2f5d9;z-index:1}.tarot-result{display:none}.tarot-result.show{display:block;animation:fade .3s ease}.tarot-card-face{border-radius:20px;padding:24px;text-align:center;background:linear-gradient(145deg,#f5f8e9,#dcebd4);border:1px solid #bcd6b4;color:#315b3b}.tarot-symbol{font-size:50px;margin:8px 0}.tarot-number{font-size:11px;letter-spacing:.18em;font-weight:800}.tarot-card-face h3{font-size:23px;margin:4px 0}.tarot-keyword{font-size:12px;color:#5b7c60}.tarot-message{font-size:15px;line-height:1.9;margin:16px 0 8px}.tarot-question{padding:14px;background:#f4f8ef;border-radius:13px;font-size:13px;line-height:1.8;color:#4b694f;margin-top:12px}.tarot-note{font-size:12px;color:var(--muted);line-height:1.8;margin-top:14px}
+@media(max-width:760px){.tarot-layout{grid-template-columns:1fr}.tarot-deck{min-height:260px}.emotion-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
 </style>
 </head>
 <body>
 <div class="app">
   <header class="topbar">
     <div class="brand"><div class="brand-mark" aria-hidden="true">☁️</div><div><div class="brand-name">心晴日记</div><div class="brand-sub">给情绪一点温柔的空间</div></div></div>
-    <div class="privacy-pill">🔒 仅保存在此设备</div>
   </header>
   <section class="hero">
     <div class="hero-copy"><div class="eyebrow">A LITTLE SPACE FOR YOU</div><h1>今天的你，<br><span>感觉怎么样？</span></h1><p>不用急着变好，也不必把一切都想明白。先停一停，听听自己的心情。每一种感受，都值得被认真对待。</p></div>
@@ -41,6 +79,7 @@ textarea{width:100%;resize:vertical;min-height:125px;border:1px solid #e9e1ef;ba
   <nav class="nav" aria-label="主导航">
     <button class="nav-btn active" data-page="journal">✎ 今日记录</button>
     <button class="nav-btn" data-page="archive">♡ 情绪档案</button>
+    <button class="nav-btn" data-page="tarot">✧ 明日塔罗</button>
     <button class="nav-btn" data-page="about">☼ 关于心晴</button>
   </nav>
 
@@ -69,7 +108,7 @@ textarea{width:100%;resize:vertical;min-height:125px;border:1px solid #e9e1ef;ba
               <button class="tag" data-tag="工作">💼 工作</button><button class="tag" data-tag="学习">📚 学习</button><button class="tag" data-tag="人际关系">🫶 人际关系</button><button class="tag" data-tag="家庭">🏡 家庭</button><button class="tag" data-tag="健康与睡眠">🌙 健康与睡眠</button><button class="tag" data-tag="生活变化">🌱 生活变化</button><button class="tag" data-tag="自我期待">🎯 自我期待</button><button class="tag" data-tag="暂时说不清">🍃 暂时说不清</button>
             </div>
             <div class="actions"><button class="btn btn-primary" id="analyzeBtn">✦ 生成情绪洞察</button><button class="btn btn-ghost" id="saveOnlyBtn">先保存记录</button><button class="btn btn-ghost" id="resetBtn">重新填写</button></div>
-            <div class="sub" style="margin-top:12px">当前为本地演示分析模式：结果由页面内置规则生成，并未调用真实 AI。</div>
+            <div class="sub" style="margin-top:12px">通过循序渐进的问题认识情绪、想法与需要。当前洞察由内置规则生成，不是专业诊断。</div>
             <div class="safety-box" id="safetyBox" role="alert"></div>
           </section>
           <section class="card result-wrap" id="resultWrap" aria-live="polite">
@@ -78,6 +117,7 @@ textarea{width:100%;resize:vertical;min-height:125px;border:1px solid #e9e1ef;ba
             <div class="insight-block"><div class="insight-label">可能的触发因素</div><div class="insight-text" id="resultTriggers"></div></div>
             <div class="insight-block"><div class="insight-label">给你的温柔回应</div><div class="insight-text" id="resultEmpathy"></div></div>
             <div class="insight-block"><div class="insight-label">也许可以想一想</div><div class="insight-text" id="resultQuestion"></div></div>
+            <section class="reflection-panel" id="reflectionPanel" style="display:none"><h3>🌿 再多理解自己一点</h3><p class="reflection-intro">不用把每个问题都答完。挑一个最有感觉的问题就好；没有标准答案，也不需要立刻解决问题。</p><div id="reflectionQuestions"></div></section>
             <div class="insight-block"><div class="insight-label">从文字里看到的线索</div><ul class="insight-list" id="resultClues"></ul></div>
             <div class="insight-block"><div class="insight-label">为此刻挑一份关怀</div><div class="sub">选择一个容易开始的小动作就好，不需要一次完成所有建议。</div><div class="recommendations" id="recommendations"></div></div>
             <div class="actions"><button class="btn btn-primary" id="saveAnalysisBtn">保存这次记录</button><button class="btn btn-ghost" id="editEntryBtn">回去修改</button></div>
@@ -103,14 +143,22 @@ textarea{width:100%;resize:vertical;min-height:125px;border:1px solid #e9e1ef;ba
       <section class="card" style="margin-top:20px"><div class="card-head"><div><h2>过往日记</h2><p class="sub">可以查看、编辑或删除任何一条记录。</p></div><span class="step" id="entryCountLabel">0 条记录</span></div><div class="entry-list" id="entryList"><div class="empty-state"><div class="empty-icon">📔</div><h3>这里还空着</h3><p>第一次记录不需要写得很完美。你愿意开始，就已经很好了。</p><button class="btn btn-soft" data-goto="journal">写下第一篇日记</button></div></div></section>
     </section>
 
+    <section class="page" id="page-tarot">
+      <div class="section-intro"><h2>给明天的一张温柔提示</h2><p>从大阿尔卡纳 22 张牌中抽一张，把它当作自我反思的小提示，而不是对未来的确定预测。</p></div>
+      <div class="tarot-layout">
+        <section class="card"><div class="card-head"><div><h2>今日抽牌仪式</h2><p class="sub">想一想：明天，我希望带着怎样的心情出发？</p></div><span class="step">22 / 大阿尔卡纳</span></div><div class="tarot-deck"><div class="tarot-back"><span>✧</span></div><strong>留一点空间给未知</strong><p class="sub" style="color:#416b48">深呼吸，然后抽取一张牌</p><button class="btn btn-primary" id="drawTarotBtn" style="margin-top:10px">✦ 抽取明日提示</button></div><p class="tarot-note">这是一种带有象征意义的 journaling（书写反思）体验。牌面文字是鼓励与提问，不是命运判断，也不替代你对现实的判断。</p></section>
+        <section class="card"><div class="card-head"><div><h2>你的明日提示</h2><p class="sub">抽牌后，这里会出现牌面与一句专属寄语。</p></div></div><div class="tarot-result" id="tarotResult" aria-live="polite"><div class="tarot-card-face"><div class="tarot-number" id="tarotNumber">0 · THE FOOL</div><div class="tarot-symbol" id="tarotSymbol">🌱</div><h3 id="tarotName">愚者</h3><div class="tarot-keyword" id="tarotKeyword">新的开始 · 保持好奇</div></div><p class="tarot-message" id="tarotMessage"></p><div class="tarot-question" id="tarotQuestion"></div><div class="actions"><button class="btn btn-soft" id="saveTarotBtn">保存这句提示</button><button class="btn btn-ghost" id="redrawTarotBtn">再抽一张</button></div><p class="sub" id="tarotSavedNotice"></p></div><div class="empty-state" id="tarotEmpty"><div class="empty-icon">🌿</div><h3>明天不必一次想清楚</h3><p>抽一张牌，带走一个温柔的提醒。真正决定明天方向的，仍然是你自己的选择。</p></div></section>
+      </div>
+    </section>
+
     <section class="page" id="page-about">
       <div class="section-intro"><h2>关于心晴日记</h2><p>一个让自我关怀更轻、更近一点的小工具。</p></div>
       <div class="grid-main">
         <section class="card"><div class="card-head"><div><h2>这里可以做什么？</h2><p class="sub">不用专业术语，也不用给自己打分。</p></div><span class="step">ABOUT</span></div>
           <div class="insight-block"><h3>☁️ 记录情绪</h3><div class="insight-text">选择情绪贴纸、调整强度，或者写下发生的事情。只选贴纸也完全可以。</div></div>
-          <div class="insight-block"><h3>🔎 看见线索</h3><div class="insight-text">本页面用简单规则示范情绪洞察如何呈现。它可能帮助你整理想法，但无法真正理解所有复杂背景。</div></div>
-          <div class="insight-block"><h3>🌿 试试关怀自己</h3><div class="insight-text">从呼吸、轻运动、音乐或一个小行动开始。建议可以跳过，也可以换一种。</div></div>
-          <div class="privacy-note">🔐 <strong>隐私说明</strong><br>你的日记只保存在当前浏览器的 localStorage 中，不会自动上传到服务器。清除浏览器数据、使用无痕窗口或更换设备可能导致记录无法找回。请避免在共享设备上记录不希望他人看到的敏感信息。</div>
+          <div class="insight-block"><h3>🔎 看见线索</h3><div class="insight-text">本页面用内置规则示范情绪洞察，并通过循序渐进的问题帮助你探索触发点、想法、需要与可采取的小行动。它不能替你下结论。</div></div>
+          <div class="insight-block"><h3>🌿 试试关怀自己</h3><div class="insight-text">从呼吸、轻运动、音乐或一个小行动开始。你也可以使用明日塔罗，把牌面当作书写反思的提示。</div></div>
+          <div class="privacy-note">🔐 <strong>隐私说明</strong><br>你的日记保存在当前浏览器中，不会自动上传到服务器。清除浏览器数据、使用无痕窗口或更换设备可能导致记录无法找回。请避免在共享设备上记录不希望他人看到的敏感信息。</div>
         </section>
         <section class="card"><h2>温柔但重要的边界</h2><p class="sub" style="line-height:2;margin-top:12px">心晴日记是自我观察与日常关怀工具，不提供心理诊断、治疗或危机干预，也不能替代专业心理支持。</p><p class="sub" style="line-height:2">如果你持续感到难以承受，或日常生活受到明显影响，可以考虑联系可信任的人、专业心理服务或医疗人员。</p><p class="sub" style="line-height:2">如果你觉得自己可能马上伤害自己或他人，请优先联系当地紧急服务，或立即前往安全的地方并让可信任的人陪伴你。在英国可拨打 999/112 寻求紧急帮助；也可联系 Samaritans 116 123。</p><div class="side-note" style="margin-top:18px;margin-bottom:0"><div class="big-quote">“</div><p>不需要把所有事情都独自处理。寻求帮助，也是照顾自己的一种方式。</p></div></section>
       </div>
@@ -143,6 +191,7 @@ const SUPPORT={
  tired:[{icon:'🌙',title:'允许自己暂停',desc:'选一件今天可以延后或简化的事，给自己留出一点余量。',kind:'action'},{icon:'🎧',title:'闭眼听一段音乐',desc:'找一段安静的音乐，坐好或躺好，让自己暂时不必回应任何事。',kind:'music'},{icon:'🧘',title:'温和伸展',desc:'轻轻转动肩膀、伸展手臂。如果身体不舒服，就停下来休息。',kind:'move'}]
 };
 let selectedEmotion='', selectedTags=new Set(), currentResult=null, editingId=null, pendingAction=null, recRotation=0, timerInterval=null, timerRemaining=60, timerRunning=false;
+let soundContext=null, soundNodes=[];
 const $=id=>document.getElementById(id);
 const safeText=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function loadEntries(){try{const d=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');return Array.isArray(d)?d:[]}catch(e){return[]}}
@@ -153,7 +202,7 @@ function todayKey(){return dateKey(new Date())}
 function formatDate(iso){const d=new Date(iso);return d.toLocaleString('zh-CN',{month:'long',day:'numeric',hour:'2-digit',minute:'2-digit'})}
 function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toast._timer);toast._timer=setTimeout(()=>t.classList.remove('show'),2600)}
 function showModal(title,message,confirmText,onConfirm){$('modalTitle').textContent=title;$('modalMessage').textContent=message;$('modalConfirm').textContent=confirmText||'确认';pendingAction=onConfirm;$('modal').classList.add('show')}
-function closeModal(){$('modal').classList.remove('show');pendingAction=null}
+function closeModal(){$('modal').classList.remove('show');pendingAction=null;clearInterval(timerInterval);timerRunning=false;stopSoundscape();const extra=$('modalMessage').nextElementSibling;if(extra&&extra.classList.contains('timer-box'))extra.remove();$('modalMessage').style.display='';$('modalCancel').textContent='取消';$('modalConfirm').textContent='确认'}
 $('modalCancel').addEventListener('click',closeModal);$('modalConfirm').addEventListener('click',()=>{const fn=pendingAction;closeModal();if(fn)fn()});$('modal').addEventListener('click',e=>{if(e.target===$('modal'))closeModal()});
 function navigate(page){document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.page===page));document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id==='page-'+page));if(page==='archive')renderArchive();window.scrollTo({top:0,behavior:'smooth'})}
 document.querySelectorAll('.nav-btn').forEach(b=>b.addEventListener('click',()=>navigate(b.dataset.page)));
@@ -162,22 +211,100 @@ $('emotionGrid').addEventListener('click',e=>{const b=e.target.closest('.emotion
 $('intensity').addEventListener('input',()=>{$('intensityValue').textContent=$('intensity').value+' / 5'});
 $('diaryText').addEventListener('input',()=>{$('charCount').textContent=$('diaryText').value.length+' / 3000'});
 $('triggerTags').addEventListener('click',e=>{const b=e.target.closest('.tag');if(!b)return;const tag=b.dataset.tag;if(selectedTags.has(tag)){selectedTags.delete(tag);b.classList.remove('selected')}else{selectedTags.add(tag);b.classList.add('selected')}});
-function resetForm(){selectedEmotion='';selectedTags.clear();editingId=null;currentResult=null;document.querySelectorAll('.emotion,.tag').forEach(b=>b.classList.remove('selected'));$('intensity').value=3;$('intensityValue').textContent='3 / 5';$('diaryText').value='';$('charCount').textContent='0 / 3000';$('resultWrap').classList.remove('show');$('safetyBox').classList.remove('show');$('analyzeBtn').textContent='✦ 生成情绪洞察';}
+function resetForm(){selectedEmotion='';selectedTags.clear();editingId=null;currentResult=null;document.querySelectorAll('.emotion,.tag').forEach(b=>b.classList.remove('selected'));$('intensity').value=3;$('intensityValue').textContent='3 / 5';$('diaryText').value='';$('charCount').textContent='0 / 3000';$('resultWrap').classList.remove('show');$('safetyBox').classList.remove('show');$('saveAnalysisBtn').disabled=false;$('saveAnalysisBtn').textContent='保存这次记录';$('analyzeBtn').textContent='✦ 生成情绪洞察';}
 $('resetBtn').addEventListener('click',()=>{if($('diaryText').value.trim()||selectedEmotion)showModal('重新填写？','当前未保存的内容会被清空。','清空',resetForm);else resetForm()});
 function detectRisk(text){return /(想死|不想活|自杀|自残|伤害自己|结束生命|活着没意思|杀了自己|伤害他人|想杀人)/i.test(text)}
-function collectInput(){return {emotion:selectedEmotion,intensity:Number($('intensity').value),text:$('diaryText').value.trim(),tags:[...selectedTags]}}
+function collectInput(){const reflections=[...document.querySelectorAll('[data-reflection-answer]')].map(el=>({question:el.previousElementSibling?.textContent||'',answer:el.value.trim()})).filter(x=>x.answer);return {emotion:selectedEmotion,intensity:Number($('intensity').value),text:$('diaryText').value.trim(),tags:[...selectedTags],reflections}}
 function inferTriggers(input){const found=new Set(input.tags.filter(t=>t!=='暂时说不清'));const rules=[['工作',/工作|上班|同事|老板|领导|加班|会议|项目|绩效|面试|职场/],['学习',/考试|作业|学习|论文|成绩|学校|老师|复习|毕业/],['人际关系',/朋友|恋爱|对象|伴侣|同学|沟通|吵架|关系|被忽略|孤独|分手/],['家庭',/父母|家人|家庭|孩子|亲戚/],['健康与睡眠',/睡不着|失眠|身体|生病|头疼|累|疲惫|睡眠|没睡/],['生活变化',/搬家|变化|搬到|新环境|离开|改变|适应/],['自我期待',/失败|不够好|没用|必须|应该|做不好|完美|比较|落后/]];rules.forEach(([tag,re])=>{if(re.test(input.text))found.add(tag)});return [...found]}
 function makeAnalysis(input){const meta=EMOTIONS[input.emotion];const text=input.text;const triggers=inferTriggers(input);const clues=[];const phraseRules=[[/应该|必须|一定要|不能失败/,'文字里出现了较强的自我要求，可以留意这些要求是否给你带来压力。'],[/担心|害怕|万一|不确定|来不及/,'你提到了对结果或未知情况的担心。'],[/没人|不懂我|孤独|被忽略|不理我/,'文字里似乎包含希望被理解或被回应的需要。'],[/生气|愤怒|凭什么|不公平|受够了/,'你表达了强烈的不满，也许有某个重要界限需要被看见。'],[/累|疲惫|睡不着|没力气|撑不住/,'你提到精力或休息方面的信号，可以看看自己是否需要更多恢复时间。'],[/开心|高兴|喜欢|终于|成功|期待|满足/,'文字里出现了积极或期待的线索，可以多留意是什么让这份感受出现。'],[/失败|没用|不够好|讨厌自己/,'你似乎正在用比较严厉的语言评价自己；一次经历并不能概括全部的你。']];phraseRules.forEach(([re,msg])=>{if(re.test(text)&&clues.length<3)clues.push(msg)});if(clues.length===0){if(text)clues.push('目前能看到的信息还不多，可以先从你选择的情绪和强度开始理解。');else clues.push('你只用贴纸表达也很好，不必为了分析而勉强自己写更多。')}if(clues.length<3&&triggers.length)clues.push('你标记或提到的相关领域包括：'+triggers.join('、')+'；它们可能是理解今天感受的线索。');if(clues.length<3&&input.intensity>=4)clues.push('你给这份感受的强度打了较高分，先照顾当下状态可能比立刻找答案更重要。');
 let question='如果不急着评判这份感受，你觉得它最想提醒你什么？';if(input.emotion==='焦虑')question='眼下有哪些事情是你可以影响的一小部分？有没有什么可以暂时放到之后再处理？';if(input.emotion==='低落')question='此刻你最希望别人理解你哪一部分？如果对自己温柔一点，你会需要什么？';if(input.emotion==='愤怒')question='这件事触碰了你在意的什么？你希望自己的界限或需要怎样被对待？';if(input.emotion==='疲惫')question='如果今天只做最必要的事，有哪一件可以简化、延后，或向别人求助？';if(input.emotion==='开心')question='这份好心情来自什么小小的瞬间？有什么方式能让你把它留在记忆里？';if(input.emotion==='平静')question='是什么让你此刻感到比较安稳？你希望把这份状态带进接下来的哪一件事？';
 const triggerText=triggers.length?'你选择或提到的「'+triggers.join('、')+'」可能与这份感受有关；这只是线索，不代表确定原因。':(text?'从目前的文字里还无法确定具体诱因，也许可以再观察一下当时的情境。':'你还没有写下事件，所以暂时不推测触发原因。');
 return {emotion:input.emotion,intensity:input.intensity,text,tags:input.tags,triggers,weather:meta.weather,title:meta.title,empathy:meta.empathy,question,clues:clues.slice(0,3),recommendations:SUPPORT[meta.tone]||SUPPORT.calm,createdAt:new Date().toISOString()}}
 function showSafety(text){const box=$('safetyBox');if(detectRisk(text)){box.classList.add('show');box.innerHTML='<strong>先照顾安全，比分析情绪更重要。</strong><br>如果你此刻可能伤害自己或他人，请尽量不要独处，联系一个可信任的人并告诉对方你需要陪伴。若有迫在眉睫的危险，请联系当地紧急服务或前往急诊。在英国可拨打 <strong>999 / 112</strong>；也可拨打 Samaritans <strong>116 123</strong> 获得倾听支持。心晴日记无法提供危机干预。';return true}box.classList.remove('show');return false}
-function renderResult(result){currentResult=result;$('resultWeather').textContent=result.weather;$('resultTitle').textContent=result.title;$('resultStrength').textContent=EMOTIONS[result.emotion].face.repeat(result.intensity).split('').join(' ');$('resultCaption').textContent='情绪强度 '+result.intensity+' / 5 · 演示分析，仅供自我反思';$('resultTriggers').textContent=result.triggers.length?'你选择或提到的「'+result.triggers.join('、')+'」可能与这份感受有关。这只是待你确认的线索，不是确定结论。':(result.text?'目前还无法从文字中确定具体诱因，可以先观察当时的环境、身体状态和脑海里的想法。':'你选择了情绪贴纸，但没有补充事件；我们先尊重这个选择，不猜测原因。');$('resultEmpathy').textContent=result.empathy;$('resultQuestion').textContent=result.question;$('resultClues').innerHTML=result.clues.map(c=>'<li>'+safeText(c)+'</li>').join('');renderRecommendations(result);$('resultWrap').classList.add('show');$('saveAnalysisBtn').textContent=editingId?'更新这次记录':'保存这次记录';setTimeout(()=>$('resultWrap').scrollIntoView({behavior:'smooth',block:'start'}),80)}
-function renderRecommendations(result){const recs=result.recommendations;const chosen=[recs[(recRotation)%recs.length],recs[(recRotation+1)%recs.length],recs[(recRotation+2)%recs.length]];$('recommendations').innerHTML=chosen.map((r,i)=>'<article class="rec-card" data-rec-kind="'+r.kind+'"><div class="rec-icon">'+r.icon+'</div><h3>'+safeText(r.title)+'</h3><p>'+safeText(r.desc)+'</p><div class="rec-actions"><button class="btn btn-soft btn-small" data-start="'+r.kind+'" data-title="'+safeText(r.title)+'">开始练习</button><button class="btn btn-ghost btn-small" data-feedback="yes">有帮助</button><button class="btn btn-ghost btn-small" data-feedback="swap">换一个</button></div><div class="feedback"></div></article>').join('')}
+const REFLECTIONS={
+ '焦虑':[
+  ['把担心说具体','你最担心发生的具体结果是什么？它发生的可能性有多大？目前有哪些事实支持或不支持这个担心？'],
+  ['区分可控与不可控','这件事里，哪些部分是你能影响的，哪些暂时不在你的控制范围？你能做的最小一步是什么？'],
+  ['拉远一点看','如果五年后回头看，你觉得这件事可能还会以同样的分量影响你吗？即使会，你希望未来的自己如何看待现在的自己？']
+ ],
+ '低落':[
+  ['找到最难受的部分','这件事里最让你伤心的是什么？是失去、失望、被忽略，还是你原本期待的事情没有发生？'],
+  ['听见自己的需要','如果这份难过有一句话想告诉你，它可能在说什么？你希望自己或别人怎样对待你？'],
+  ['给自己一点空间','如果今天不要求自己立刻振作，你可以允许自己做什么？有什么很小的事能让接下来的十分钟稍微好过一点？']
+ ],
+ '愤怒':[
+  ['找出被触碰的界限','你觉得这件事为什么会让你生气？是因为不公平、不被尊重、失去控制，还是某个重要的需要没有被看见？'],
+  ['区分事实与解读','对方具体做了什么（事实）？你如何理解这件事（解读）？还有没有其他可能的解释，同时又不否定你的感受？'],
+  ['选择怎样回应','如果现在先不行动，可能会发生什么？如果要回应，怎样表达感受与界限，既保护自己，也尽量不让局面升级？']
+ ],
+ '疲惫':[
+  ['看看精力去了哪里','最近哪些事情消耗了你最多精力？其中哪些是必须完成的，哪些可以简化、推迟或请人帮忙？'],
+  ['允许休息','你会不会觉得必须完成所有事情才有资格休息？如果朋友处于同样状态，你会怎么建议对方？'],
+  ['只选一个小动作','今天有什么事情可以先做到“足够好”而不是完美？你可以怎样给自己留出一点恢复的空间？']
+ ],
+ '开心':[
+  ['捕捉快乐来源','今天哪个具体瞬间让你感到开心？它满足了你什么需要，或体现了你在意的什么？'],
+  ['留住这份感觉','有什么方式能让你记住这份好心情？例如写下一句话、分享给某个人，或给自己留一张照片。']
+ ],
+ '平静':[
+  ['理解安稳的来源','此刻有哪些条件帮助你感到平静？例如环境、关系、节奏，或你对事情的看法。'],
+  ['把有用的部分带走','接下来一天里，你可以保留哪一个让自己更安稳的小习惯？']
+ ]
+};
+const TAROT_CARDS=[
+ ['0','愚者','新的开始 · 保持好奇','🌱','明天不必一开始就知道所有答案。带着一点好奇迈出第一步，路会在行动中慢慢显现。','明天有什么事，你愿意用初学者的心态尝试一下？'],
+ ['I','魔术师','资源 · 行动','🪄','你手边可能已经有一些可用的资源。先从已有的能力、经验或支持开始，而不是等到万事俱备。','我现在已经拥有的一个资源是什么？'],
+ ['II','女祭司','直觉 · 留白','🌙','有些答案需要安静一会儿才会浮现。给自己一点不被催促的空间，也让事实有机会说话。','如果暂时不急着下结论，我还想观察什么？'],
+ ['III','皇后','滋养 · 丰盛','🌷','成长不总靠努力推进，也来自被照顾、被滋养。明天记得给身体和心留一点舒服的空间。','什么会让我感到被滋养，而不是被消耗？'],
+ ['IV','皇帝','结构 · 边界','🪨','清晰的边界能帮助你保护重要的事。你不需要控制一切，只要决定下一步由自己负责的部分。','我需要为自己设下哪一个温和而清晰的界限？'],
+ ['V','教皇','学习 · 支持','📖','你不必独自摸索。可靠的经验、合适的规则或值得信任的人，都可能成为你前进时的支持。','我可以向谁请教，或从哪里获得可靠信息？'],
+ ['VI','恋人','价值 · 选择','🍃','重要的选择不只是“哪个更好”，也包括“哪个更符合我真正重视的东西”。给自己的价值观一点发言权。','我最在意的是什么？我的选择有照顾到它吗？'],
+ ['VII','战车','方向 · 坚持','🛤️','把精力放回自己能影响的方向。进步不必很快，能够重新对准目标就已经是行动。','明天最值得我投入精力的一件事是什么？'],
+ ['VIII','力量','温柔 · 勇气','🦁','勇气不一定是硬撑，也可以是温柔地承认自己正在经历什么，再决定如何继续。','我能怎样既诚实面对感受，又温柔对待自己？'],
+ ['IX','隐者','独处 · 觉察','🕯️','暂时退后一步，有时能让你更清楚听见自己的声音。独处不是逃避，前提是它让你恢复，而不是让你陷入孤立。','我现在需要安静整理，还是需要找人陪伴？'],
+ ['X','命运之轮','变化 · 弹性','🎡','生活总有一些部分不按计划发生。你不必喜欢每一种变化，但可以试着找到自己仍能选择的部分。','在变化之中，什么仍然掌握在我手里？'],
+ ['XI','正义','诚实 · 平衡','⚖️','尽量同时看见事实、感受和影响。对自己公平，也意味着不因一次失误就否定整个人。','如果我用更公平的标准看待自己，这件事会有什么不同？'],
+ ['XII','倒吊人','暂停 · 新视角','🍂','暂停不等于停滞。有时换一个角度，或暂时不急着行动，反而能看见新的选项。','如果我从另一个人的角度看这件事，会注意到什么？'],
+ ['XIII','死神','结束 · 转化','🦋','结束不一定意味着失败，也可能是在为新的阶段腾出空间。你可以感谢曾经有用的东西，也允许自己改变。','有什么旧习惯或期待，已经不再适合现在的我？'],
+ ['XIV','节制','节奏 · 调和','💧','不必在两个极端之间做选择。小幅调整、休息与行动交替，也是一种稳健的前进方式。','我可以把明天的节奏调整得更适合自己一点吗？'],
+ ['XV','恶魔','束缚 · 看见模式','🔓','看见让自己陷住的模式，是重新选择的开始。不要急着责怪自己，先观察它在什么时刻出现、试图保护你什么。','哪个重复出现的习惯正在消耗我？我可以先改变哪一小部分？'],
+ ['XVI','高塔','真相 · 重建','🌩️','计划被打乱会让人不安，但看见问题也能帮助你重新建立更稳固的安排。先照顾好当下，再处理下一步。','现在最需要先稳定下来的是什么？'],
+ ['XVII','星星','希望 · 恢复','⭐','希望不必很宏大。它可以是一个可以求助的人、一件仍然喜欢的小事，或今天愿意再试一次的自己。','有什么微小的事情，仍然让我觉得值得期待？'],
+ ['XVIII','月亮','不确定 · 温柔','🌕','当信息不完整时，想象容易把空白填成最可怕的答案。允许自己暂时不知道，并慢慢核实事实。','哪些是我确实知道的，哪些是我担心可能发生的？'],
+ ['XIX','太阳','清晰 · 活力','☀️','让简单的快乐有位置。你不必等到所有问题解决后，才允许自己享受一个明亮的小瞬间。','明天我想主动为自己创造哪一个小小的快乐？'],
+ ['XX','审判','回顾 · 更新','🔔','回顾过去是为了理解，而不是惩罚自己。你可以从经验里带走一件有用的事，再允许自己继续向前。','我想从最近的一次经历中学到什么，而不是责备自己什么？'],
+ ['XXI','世界','整合 · 完成','🌍','看见自己已经走过的路。完成不一定完美，阶段性的结束也值得被承认，然后再决定下一段旅程。','最近有什么进步，是我平常容易忽略的？']
+];
+function renderReflection(result){const panel=$('reflectionPanel'),target=$('reflectionQuestions');const qs=REFLECTIONS[result.emotion]||REFLECTIONS['平静'];if(['焦虑','低落','愤怒','疲惫'].includes(result.emotion)){panel.style.display='block';target.innerHTML=qs.map((q,i)=>'<div class="reflection-item"><label for="reflection'+i+'">'+(i+1)+'. '+safeText(q[0])+'</label><p>'+safeText(q[1])+'</p><textarea id="reflection'+i+'" data-reflection-answer="'+i+'" maxlength="1000" placeholder="可以写几个词，也可以先留空……"></textarea></div>').join('')}else{panel.style.display='block';target.innerHTML=qs.map((q,i)=>'<div class="reflection-item"><label for="reflection'+i+'">'+(i+1)+'. '+safeText(q[0])+'</label><p>'+safeText(q[1])+'</p><textarea id="reflection'+i+'" data-reflection-answer="'+i+'" maxlength="1000" placeholder="可以写几个词，也可以先留空……"></textarea></div>').join('')}}
+function drawTarot(){const card=TAROT_CARDS[Math.floor(Math.random()*TAROT_CARDS.length)];$('tarotNumber').textContent=card[0]+' · MAJOR ARCANA';$('tarotName').textContent=card[1];$('tarotKeyword').textContent=card[2];$('tarotSymbol').textContent=card[3];$('tarotMessage').textContent=card[4];$('tarotQuestion').textContent='给自己的一个问题：'+card[5];$('tarotResult').classList.add('show');$('tarotEmpty').style.display='none';$('tarotSavedNotice').textContent='';$('tarotResult').dataset.card=card[1]}
+$('drawTarotBtn').addEventListener('click',drawTarot);$('redrawTarotBtn').addEventListener('click',drawTarot);$('saveTarotBtn').addEventListener('click',()=>{const card=$('tarotResult').dataset.card;if(!card){toast('先抽取一张牌吧。');return}const text='明日提示｜'+card+'：'+$('tarotMessage').textContent+' '+$('tarotQuestion').textContent;try{const key='qingxin_tarot_notes_v1';const notes=JSON.parse(localStorage.getItem(key)||'[]');notes.unshift({date:new Date().toISOString(),card,text});localStorage.setItem(key,JSON.stringify(notes.slice(0,30)));$('tarotSavedNotice').textContent='已保存到这台设备的浏览器中。';toast('这句提示已保存。')}catch(e){toast('暂时无法保存，请复制或截图留存。')}});
+function renderResult(result){currentResult=result;$('resultWeather').textContent=result.weather;$('resultTitle').textContent=result.title;$('resultStrength').textContent=EMOTIONS[result.emotion].face.repeat(result.intensity).split('').join(' ');$('resultCaption').textContent='情绪强度 '+result.intensity+' / 5 · 演示分析，仅供自我反思';$('resultTriggers').textContent=result.triggers.length?'你选择或提到的「'+result.triggers.join('、')+'」可能与这份感受有关。这只是待你确认的线索，不是确定结论。':(result.text?'目前还无法从文字中确定具体诱因，可以先观察当时的环境、身体状态和脑海里的想法。':'你选择了情绪贴纸，但没有补充事件；我们先尊重这个选择，不猜测原因。');$('resultEmpathy').textContent=result.empathy;$('resultQuestion').textContent=result.question;$('resultClues').innerHTML=result.clues.map(c=>'<li>'+safeText(c)+'</li>').join('');renderReflection(result);renderRecommendations(result);$('resultWrap').classList.add('show');$('saveAnalysisBtn').textContent=editingId?'更新这次记录':'保存这次记录';setTimeout(()=>$('resultWrap').scrollIntoView({behavior:'smooth',block:'start'}),80)}
+function renderRecommendations(result){const recs=result.recommendations;const chosen=[recs[(recRotation)%recs.length],recs[(recRotation+1)%recs.length],recs[(recRotation+2)%recs.length]];$('recommendations').innerHTML=chosen.map((r,i)=>'<article class="rec-card" data-rec-kind="'+r.kind+'"><div class="rec-icon">'+r.icon+'</div><h3>'+safeText(r.title)+'</h3><p>'+safeText(r.desc)+'</p><div class="rec-actions"><button class="btn btn-soft btn-small" data-start="'+r.kind+'" data-title="'+safeText(r.title)+'">试试看</button><button class="btn btn-ghost btn-small" data-feedback="yes">有帮助</button><button class="btn btn-ghost btn-small" data-feedback="swap">换一个</button></div><div class="feedback"></div></article>').join('')}
 $('recommendations').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const card=b.closest('.rec-card');if(b.dataset.feedback==='yes'){card.querySelector('.feedback').textContent='♡ 谢谢你告诉我，这个反馈会帮助你留意适合自己的方式。';b.disabled=true;return}if(b.dataset.feedback==='swap'){recRotation++;renderRecommendations(currentResult);return}if(b.dataset.start){startPractice(b.dataset.start,b.dataset.title)}});
 function startPractice(kind,title){if(kind==='breath'){showBreathingModal();return}if(kind==='music'){showModal(title,'音乐建议：选择你熟悉、听起来舒服的曲子即可。你也可以打开音乐平台搜索「舒缓纯音乐 / 温柔钢琴 / 轻松歌单」。此演示页不自动播放音乐，也不假装已播放。','知道了');return}let msg='给自己 5 分钟，慢慢走动或轻柔伸展。以舒服为准，不需要追求运动量；如有不适，请停下来。';if(kind==='comfort')msg='可以轻轻对自己说：“我现在的感受有它的理由。我不必马上解决一切，也值得被温柔对待。”如果这句话不贴合你，也可以换成你自己的表达。';if(kind==='action')msg='选一个两分钟内能完成的小动作：喝水、整理一小块桌面、打开窗户，或给信任的人发一句消息。完成与否都不代表你的价值。';showModal(title,msg,'我试试看')}
-function showBreathingModal(){const box=document.createElement('div');box.className='timer-box show';box.innerHTML='<div style="text-align:center;font-size:13px;color:var(--muted)">跟随舒服的节奏呼吸，不需要刻意吸很深</div><div class="breath-orb" id="breathOrb"></div><div class="timer-display" id="timerDisplay">01:00</div><div style="text-align:center;font-size:13px;color:var(--muted)" id="breathInstruction">准备好了就开始</div><div class="actions" style="justify-content:center"><button class="btn btn-primary" id="timerStart">开始</button><button class="btn btn-ghost" id="timerReset">重新开始</button></div>';showModal('一分钟呼吸练习','把注意力轻轻放在呼吸上。如果闭眼不舒服，可以睁着眼；如果头晕或不适，停止练习并恢复自然呼吸。','完成',()=>stopTimer());$('modalMessage').style.display='none';$('modalMessage').after(box);timerRemaining=60;timerRunning=false;clearInterval(timerInterval);const display=box.querySelector('#timerDisplay'),instruction=box.querySelector('#breathInstruction'),orb=box.querySelector('#breathOrb'),start=box.querySelector('#timerStart');function paint(){display.textContent=String(Math.floor(timerRemaining/60)).padStart(2,'0')+':'+String(timerRemaining%60).padStart(2,'0');instruction.textContent=timerRemaining===0?'练习结束。谢谢你留了一分钟给自己。':(timerRunning?(timerRemaining%8>=4?'慢慢呼气':'轻轻吸气'):'准备好了就开始');orb.classList.toggle('breathe',timerRunning&&timerRemaining%8<4);start.textContent=timerRunning?'暂停':'继续'}function tick(){if(timerRemaining<=0){clearInterval(timerInterval);timerRunning=false;paint();return}timerRemaining--;paint()}start.onclick=()=>{if(timerRemaining===0)timerRemaining=60;timerRunning=!timerRunning;if(timerRunning){clearInterval(timerInterval);timerInterval=setInterval(tick,1000)}else clearInterval(timerInterval);paint()};box.querySelector('#timerReset').onclick=()=>{clearInterval(timerInterval);timerRemaining=60;timerRunning=false;paint()};paint();$('modalCancel').textContent='关闭';$('modalConfirm').textContent='结束练习';$('modalConfirm').onclick=()=>{clearInterval(timerInterval);timerRunning=false;closeModal();$('modalCancel').textContent='取消';$('modalMessage').style.display='';box.remove()};$('modalCancel').onclick=()=>{clearInterval(timerInterval);timerRunning=false;closeModal();$('modalCancel').textContent='取消';$('modalMessage').style.display='';box.remove()};}
-function createEntry(input,result){const now=new Date().toISOString();return {id:editingId||('e_'+Date.now()+'_'+Math.random().toString(36).slice(2,7)),emotion:input.emotion,intensity:input.intensity,text:input.text,tags:input.tags,analysis:result?{triggers:result.triggers,clues:result.clues,question:result.question}:null,createdAt:editingId?(entries.find(e=>e.id===editingId)?.createdAt||now):now,updatedAt:now}}
+function stopSoundscape(){
+  soundNodes.forEach(node=>{try{if(node.stop)node.stop();if(node.disconnect)node.disconnect()}catch(e){}});soundNodes=[];
+  if(soundContext){try{soundContext.close()}catch(e){}soundContext=null}
+}
+function startSoundscape(mode){
+  stopSoundscape();if(!mode||mode==='off')return;
+  const AudioCtx=window.AudioContext||window.webkitAudioContext;if(!AudioCtx)return;
+  try{
+    soundContext=new AudioCtx();const ctx=soundContext,master=ctx.createGain();master.gain.value=mode==='rain'?0.12:0.035;master.connect(ctx.destination);soundNodes.push(master);
+    if(mode==='rain'){
+      const buffer=ctx.createBuffer(1,ctx.sampleRate*2,ctx.sampleRate),data=buffer.getChannelData(0);
+      for(let i=0;i<data.length;i++)data[i]=Math.random()*2-1;
+      const noise=ctx.createBufferSource();noise.buffer=buffer;noise.loop=true;
+      const filter=ctx.createBiquadFilter();filter.type='lowpass';filter.frequency.value=850;
+      const soften=ctx.createBiquadFilter();soften.type='highpass';soften.frequency.value=100;
+      noise.connect(filter);filter.connect(soften);soften.connect(master);noise.start();soundNodes.push(noise,filter,soften);
+    }else if(mode==='ambient'){
+      [174.61,220,261.63].forEach((freq,i)=>{const osc=ctx.createOscillator(),gain=ctx.createGain();osc.type='sine';osc.frequency.value=freq;gain.gain.value=[0.42,0.27,0.18][i];osc.connect(gain);gain.connect(master);osc.start();soundNodes.push(osc,gain)});
+    }
+  }catch(e){stopSoundscape();toast('当前浏览器无法播放背景声音，可以继续进行无声练习。')}
+}
+function showBreathingModal(){const box=document.createElement('div');box.className='timer-box show';box.innerHTML='<div style="text-align:center;font-size:13px;color:var(--muted)">跟随舒服的节奏呼吸，不需要刻意吸很深</div><div class="breath-orb" id="breathOrb"></div><div class="timer-display" id="timerDisplay">01:00</div><div style="text-align:center;font-size:13px;color:var(--muted)" id="breathInstruction">准备好了就开始</div><label for="soundscapeSelect" style="display:block;font-size:13px;font-weight:700;margin:14px 0 6px">背景声音</label><select id="soundscapeSelect" style="width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)"><option value="off">关闭声音</option><option value="rain">🌧️ 柔和白噪音（雨声感）</option><option value="ambient">🎹 轻柔氛围音</option></select><div class="sub" style="margin-top:6px;text-align:center">声音由浏览器实时生成，无需外部音乐链接；开始练习后播放。</div><div class="actions" style="justify-content:center"><button class="btn btn-primary" id="timerStart">开始</button><button class="btn btn-ghost" id="timerReset">重新开始</button></div>';showModal('一分钟呼吸练习','把注意力轻轻放在呼吸上。如果闭眼不舒服，可以睁着眼；如果头晕或不适，停止练习并恢复自然呼吸。','完成');$('modalMessage').style.display='none';$('modalMessage').after(box);timerRemaining=60;timerRunning=false;clearInterval(timerInterval);const display=box.querySelector('#timerDisplay'),instruction=box.querySelector('#breathInstruction'),orb=box.querySelector('#breathOrb'),start=box.querySelector('#timerStart');function paint(){display.textContent=String(Math.floor(timerRemaining/60)).padStart(2,'0')+':'+String(timerRemaining%60).padStart(2,'0');instruction.textContent=timerRemaining===0?'练习结束。谢谢你留了一分钟给自己。':(timerRunning?(timerRemaining%8>=4?'慢慢呼气':'轻轻吸气'):'准备好了就开始');orb.classList.toggle('breathe',timerRunning&&timerRemaining%8<4);start.textContent=timerRunning?'暂停':'继续'}function tick(){if(timerRemaining<=0){clearInterval(timerInterval);timerRunning=false;paint();return}timerRemaining--;paint()}const soundSelect=box.querySelector('#soundscapeSelect');start.onclick=()=>{if(timerRemaining===0)timerRemaining=60;timerRunning=!timerRunning;if(timerRunning){startSoundscape(soundSelect.value);clearInterval(timerInterval);timerInterval=setInterval(tick,1000)}else{clearInterval(timerInterval);stopSoundscape()}paint()};soundSelect.onchange=()=>{if(timerRunning)startSoundscape(soundSelect.value)};box.querySelector('#timerReset').onclick=()=>{clearInterval(timerInterval);timerRemaining=60;timerRunning=false;stopSoundscape();paint()};paint();$('modalCancel').textContent='关闭';$('modalConfirm').textContent='结束练习';$('modalConfirm').onclick=()=>{clearInterval(timerInterval);timerRunning=false;stopSoundscape();closeModal();$('modalCancel').textContent='取消';$('modalConfirm').textContent='确认';$('modalMessage').style.display='';box.remove()};$('modalCancel').onclick=()=>{clearInterval(timerInterval);timerRunning=false;stopSoundscape();closeModal();$('modalCancel').textContent='取消';$('modalConfirm').textContent='确认';$('modalMessage').style.display='';box.remove()};}
+function createEntry(input,result){const now=new Date().toISOString();return {id:editingId||('e_'+Date.now()+'_'+Math.random().toString(36).slice(2,7)),emotion:input.emotion,intensity:input.intensity,text:input.text,tags:input.tags,reflections:input.reflections||[],analysis:result?{triggers:result.triggers,clues:result.clues,question:result.question}:null,createdAt:editingId?(entries.find(e=>e.id===editingId)?.createdAt||now):now,updatedAt:now}}
 function saveCurrent(withAnalysis){const input=collectInput();if(!input.emotion){toast('先选择一个最接近此刻的情绪贴纸吧。');return}if(!input.text&&!input.tags.length&&input.emotion==='平静'){/* emotion-only is valid */}const result=withAnalysis?(currentResult||makeAnalysis(input)):null;const entry=createEntry(input,result);if(editingId){entries=entries.map(e=>e.id===editingId?entry:e)}else entries.unshift(entry);if(!saveEntries())return;toast(editingId?'已更新这条记录。':'这份心情已保存。');editingId=null;currentResult=result;renderStats();if(withAnalysis&&result){$('saveAnalysisBtn').textContent='已保存 ✓';$('saveAnalysisBtn').disabled=true}else{resetForm()} }
 $('analyzeBtn').addEventListener('click',()=>{const input=collectInput();if(!input.emotion){toast('先选择一个情绪贴纸，再继续吧。');return}if(showSafety(input.text)){toast('请先查看页面中的安全支持提示。');return}renderResult(makeAnalysis(input))});
 $('saveOnlyBtn').addEventListener('click',()=>{const input=collectInput();if(!input.emotion){toast('先选择一个情绪贴纸，再保存吧。');return}if(showSafety(input.text)){toast('请先查看页面中的安全支持提示。');return}saveCurrent(false)});
@@ -190,7 +317,7 @@ function renderEntryList(){const list=$('entryList');$('entryCountLabel').textCo
 $('entryList').addEventListener('click',e=>{const edit=e.target.closest('[data-edit]'),del=e.target.closest('[data-delete]');if(edit)editEntry(edit.dataset.edit);if(del)deleteEntry(del.dataset.delete)});
 function renderStats(){const today=entries.filter(e=>dateKey(e.createdAt)===todayKey()).length;$('todayCount').textContent=today;$('streakCount').textContent=new Set(entries.map(e=>dateKey(e.createdAt))).size}
 function lastSevenDays(){const arr=[];for(let i=6;i>=0;i--){const d=new Date();d.setHours(0,0,0,0);d.setDate(d.getDate()-i);arr.push({key:dateKey(d),label:(d.getMonth()+1)+'/'+d.getDate()})}return arr}
-function drawChart(){const canvas=$('moodChart');if(!canvas)return;const rect=canvas.getBoundingClientRect(),dpr=window.devicePixelRatio||1;canvas.width=Math.max(1,rect.width*dpr);canvas.height=Math.max(1,rect.height*dpr);const ctx=canvas.getContext('2d');ctx.scale(dpr,dpr);const w=rect.width,h=rect.height;ctx.clearRect(0,0,w,h);const days=lastSevenDays();const vals=days.map(d=>{const list=entries.filter(e=>dateKey(e.createdAt)===d.key);return list.length?list.reduce((a,e)=>a+Number(e.intensity||0),0)/list.length:null});const pad={l:27,r:14,t:18,b:28},cw=w-pad.l-pad.r,ch=h-pad.t-pad.b;ctx.font='10px system-ui';ctx.textAlign='right';ctx.textBaseline='middle';for(let v=1;v<=5;v++){const y=pad.t+ch-(v-1)/4*ch;ctx.strokeStyle='#eee8f2';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(pad.l,y);ctx.lineTo(w-pad.r,y);ctx.stroke();ctx.fillStyle='#aaa1b3';ctx.fillText(String(v),pad.l-10,y)}days.forEach((d,i)=>{const x=pad.l+(days.length===1?cw/2:i/(days.length-1)*cw);ctx.fillStyle='#9990a5';ctx.textAlign='center';ctx.textBaseline='top';ctx.fillText(d.label,x,h-pad.b+10)});const pts=vals.map((v,i)=>({x:pad.l+(days.length===1?cw/2:i/(days.length-1)*cw),y:v===null?null:pad.t+ch-(v-1)/4*ch,v}));let run=[];function drawRun(){if(!run.length)return;ctx.strokeStyle='#9e87c7';ctx.lineWidth=2.5;ctx.lineJoin='round';ctx.lineCap='round';ctx.beginPath();run.forEach((p,i)=>i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y));ctx.stroke();run.forEach(p=>{ctx.fillStyle='#fff';ctx.strokeStyle='#9e87c7';ctx.lineWidth=2;ctx.beginPath();ctx.arc(p.x,p.y,4,0,Math.PI*2);ctx.fill();ctx.stroke()});run=[]}pts.forEach(p=>{if(p.y===null)drawRun();else run.push(p)});drawRun();if(!entries.length){ctx.fillStyle='#a69bad';ctx.textAlign='center';ctx.textBaseline='middle';ctx.font='13px system-ui';ctx.fillText('保存记录后，这里会显示你的情绪趋势',w/2,h/2)}}
+function drawChart(){const canvas=$('moodChart');if(!canvas)return;const rect=canvas.getBoundingClientRect(),dpr=window.devicePixelRatio||1;canvas.width=Math.max(1,rect.width*dpr);canvas.height=Math.max(1,rect.height*dpr);const ctx=canvas.getContext('2d');ctx.scale(dpr,dpr);const w=rect.width,h=rect.height;ctx.clearRect(0,0,w,h);const days=lastSevenDays();const vals=days.map(d=>{const list=entries.filter(e=>dateKey(e.createdAt)===d.key);return list.length?list.reduce((a,e)=>a+Number(e.intensity||0),0)/list.length:null});const pad={l:27,r:14,t:18,b:28},cw=w-pad.l-pad.r,ch=h-pad.t-pad.b;ctx.font='10px system-ui';ctx.textAlign='right';ctx.textBaseline='middle';for(let v=1;v<=5;v++){const y=pad.t+ch-(v-1)/4*ch;ctx.strokeStyle='#eee8f2';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(pad.l,y);ctx.lineTo(w-pad.r,y);ctx.stroke();ctx.fillStyle='#aaa1b3';ctx.fillText(String(v),pad.l-10,y)}days.forEach((d,i)=>{const x=pad.l+(days.length===1?cw/2:i/(days.length-1)*cw);ctx.fillStyle='#9990a5';ctx.textAlign='center';ctx.textBaseline='top';ctx.fillText(d.label,x,h-pad.b+10)});const pts=vals.map((v,i)=>({x:pad.l+(days.length===1?cw/2:i/(days.length-1)*cw),y:v===null?null:pad.t+ch-(v-1)/4*ch,v}));let run=[];function drawRun(){if(!run.length)return;ctx.strokeStyle='#6ca574';ctx.lineWidth=2.5;ctx.lineJoin='round';ctx.lineCap='round';ctx.beginPath();run.forEach((p,i)=>i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y));ctx.stroke();run.forEach(p=>{ctx.fillStyle='#fff';ctx.strokeStyle='#6ca574';ctx.lineWidth=2;ctx.beginPath();ctx.arc(p.x,p.y,4,0,Math.PI*2);ctx.fill();ctx.stroke()});run=[]}pts.forEach(p=>{if(p.y===null)drawRun();else run.push(p)});drawRun();if(!entries.length){ctx.fillStyle='#a69bad';ctx.textAlign='center';ctx.textBaseline='middle';ctx.font='13px system-ui';ctx.fillText('保存记录后，这里会显示你的情绪趋势',w/2,h/2)}}
 function renderBars(targetId,counts,total){const el=$(targetId),items=Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,6);if(!items.length){el.innerHTML='<div class="empty-state"><div class="empty-icon">🍃</div><p>还没有足够的记录。</p></div>';return}const max=Math.max(...items.map(x=>x[1]));el.innerHTML=items.map(([name,n])=>'<div class="bar-row"><span>'+safeText(name)+'</span><div class="bar-track"><div class="bar-fill" style="width:'+Math.max(5,n/max*100)+'%"></div></div><strong style="font-size:12px;color:var(--deep)">'+n+'</strong></div>').join('')}
 function renderArchive(){renderEntryList();const days=lastSevenDays();drawChart();const recent=entries.filter(e=>{const k=dateKey(e.createdAt);return days.some(d=>d.key===k)});if(!recent.length){$('weeklySummary').textContent='最近 7 天还没有保存的记录。你可以从今天开始，哪怕只选择一个贴纸，也是在认识自己。'}else{const ec={},tc={};recent.forEach(e=>{ec[e.emotion]=(ec[e.emotion]||0)+1;(e.tags||[]).forEach(t=>{tc[t]=(tc[t]||0)+1})});const topE=Object.entries(ec).sort((a,b)=>b[1]-a[1])[0];const topT=Object.entries(tc).sort((a,b)=>b[1]-a[1])[0];const avg=(recent.reduce((a,e)=>a+Number(e.intensity||0),0)/recent.length).toFixed(1);$('weeklySummary').textContent='最近 7 天你保存了 '+recent.length+' 条记录，平均情绪强度为 '+avg+' / 5。出现较多的情绪是「'+topE[0]+'」。'+(topT?'你也多次标记了「'+topT[0]+'」这一领域。':'目前还没有明显的触发因素标签。')+' 这些只是记录中的模式，不代表情绪好坏，也不一定说明因果。请以自己的体验为准。'}const ec={},tc={};recent.forEach(e=>{ec[e.emotion]=(ec[e.emotion]||0)+1;(e.tags||[]).forEach(t=>{tc[t]=(tc[t]||0)+1})});renderBars('emotionStats',ec,recent.length);renderBars('triggerStats',tc,recent.length)}
 document.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click',()=>navigate(b.dataset.goto)));
